@@ -8,24 +8,21 @@ const page = ref({
   total: 0,
   products: []
 })
+
 onMounted(() => {
-  page.products = listProducts()
-  console.log(page.products)
+  axios.get('http://localhost:8080/coupons/product/list').then((res) => {
+    console.log(res.data)
+    page.value.products = res.data
+  })
 })
 </script>
 
 <template>
-  <router-view></router-view>
+  <router-view :products="page.products"></router-view>
 </template>
 
 <script>
 export default {
   name: 'App'
-}
-
-const listProducts = () => {
-  axios.get('http://localhost:8080/coupons/product/list').then((res) => {
-    return res.data
-  })
 }
 </script>

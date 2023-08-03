@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import axios from 'axios'
+import Layout from './components/BasicLayout.vue'
 
 const fields = ref([
   { key: 'label', label: 'Nome' },
@@ -23,7 +24,13 @@ onMounted(() => {
 </script>
 
 <template>
-  <router-view :products="page.products" :fields="fields"></router-view>
+  <Layout>
+    <template v-slot:content>
+      <div id="app">
+        <router-view :products="page.products" :fields="fields"></router-view>
+      </div>
+    </template>
+  </Layout>
 </template>
 
 <script>
@@ -33,7 +40,8 @@ export default {
 </script>
 <style lang="scss">
 #app {
-  max-width: 1280px;
+  // height: 100%;
+  // margin: 0;
   display: flex;
   flex-direction: column;
 }

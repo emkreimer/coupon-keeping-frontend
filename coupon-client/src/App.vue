@@ -1,7 +1,8 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import axios from 'axios'
-import Layout from './components/BasicLayout.vue'
+import Navbar from './components/layout/Navbar.vue'
+import Footer from './components/layout/Footer.vue'
 
 const fields = ref([
   { key: 'label', label: 'Nome' },
@@ -24,25 +25,30 @@ onMounted(() => {
 </script>
 
 <template>
-  <Layout>
-    <template v-slot:content>
-      <div id="app">
-        <router-view :products="page.products" :fields="fields"></router-view>
-      </div>
-    </template>
-  </Layout>
+  <div>
+    <Navbar />
+    <router-view :products="page.products" :fields="fields"></router-view>
+    <Footer />
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Navbar,
+    Footer
+  }
 }
 </script>
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
 #app {
-  // height: 100%;
-  // margin: 0;
-  display: flex;
-  flex-direction: column;
+  display: block !important;
+  background-color: #f8f8f8 !important;
+  font-family: 'Exo 2', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
 }
 </style>

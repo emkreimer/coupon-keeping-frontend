@@ -5,15 +5,15 @@
         <img width="50" height="50" />
       </a>
       <span class="navbar-item bc d-none d-xl-block d-lg-block py-0">
-        <router-link class="pl-5 px-2" to="/">Home</router-link>
-        <router-link class="px-3" to="/">Prop</router-link>
-        <router-link class="px-2" to="/">Prop 1</router-link>
+        <router-link to="/">Home</router-link>
+        <router-link class="px-4" to="/">Prop</router-link>
+        <router-link to="/">Prop 1</router-link>
       </span>
       <p class="navbar-item ml-auto"></p>
-      <div class="searc d-none d-xl-block d-lg-block pr-3">
+      <div class="searc d-none d-xl-block d-lg-block px-4">
         <input type="search" class="search form-control" />
       </div>
-      <div class="user px-2">
+      <div class="user">
         <h5 style="cursor: pointer">Sign In</h5>
       </div>
     </nav>

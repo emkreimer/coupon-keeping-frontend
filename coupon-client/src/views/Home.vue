@@ -1,7 +1,7 @@
-<template>
-  <HelloWorld />
-</template>
-
 <script lang="ts" setup>
-  import HelloWorld from '@/components/HelloWorld.vue'
+import ProductList from "../components/ProductList.vue";
 </script>
+
+<template>
+  <ProductList />
+</template>

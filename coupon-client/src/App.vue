@@ -1,7 +1,7 @@
-<template>
-  <router-view />
-</template>
-
 <script lang="ts" setup>
-  //
+import ProductList from "./components/ProductList.vue";
 </script>
+
+<template>
+  <ProductList />
+</template>

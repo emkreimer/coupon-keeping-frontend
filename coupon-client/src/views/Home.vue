@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import ProductList from "../components/ProductList.vue";
+import Menu from "../components/Menu.vue";
 </script>
 
 <template>
-  <ProductList />
+  <Menu></Menu>
 </template>

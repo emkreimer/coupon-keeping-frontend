@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
-import type Product from "../types/Product";
-import { listProducts } from "../services/productService";
+import type Product from "../../types/Product";
+import { listProducts } from "../../services/productService";
 
 const products = ref<Product[]>([]);
 onMounted(async () => {

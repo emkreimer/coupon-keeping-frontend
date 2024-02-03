@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import ProductList from "./components/ProductList.vue";
+import Home from "./views/Home.vue";
 </script>
 
 <template>
-  <ProductList />
+  <Home />
 </template>
